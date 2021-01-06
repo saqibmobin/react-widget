@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Accordion from './components/Accordion';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const items = [
+    {
+        title: 'Why use react as a frontend framework?',
+        content: 'Because react is awesome.',
+    },
+    {
+        title: 'What is the capital of slovenia?',
+        content: 'Ljubljana is the capital of slovenia.',
+    },
+    {
+        title: 'Dili is the capital of which country?',
+        content: "East Timor's capital is Dili",
+    },
+];
 
-export default App;
+export default () => {
+    return (
+        <div>
+            <Accordion items={items} />
+        </div>
+    );
+};
